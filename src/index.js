@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
 import './index.css';
 
 class Plate extends React.Component {
@@ -18,7 +19,6 @@ class Plate extends React.Component {
                 <th>Qty</th>
                 <th>Total</th>
                 <th>{this.formatMoney(this.state.total)}</th>
-                <th></th>
             </tr>
             {this.props.plates.map(plate => (
                 <tr>
@@ -55,7 +55,7 @@ class Plate extends React.Component {
     }
 }
 
-class Basket extends React.Component {
+class Sushi extends React.Component {
     constructor(props) {
         super(props);
         this.state = {plates: [
@@ -78,5 +78,5 @@ class Basket extends React.Component {
         );
     }
 }
-
-ReactDOM.render(<Basket />, document.getElementById('root3'));
+ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Sushi />, document.getElementById('sushi'));
